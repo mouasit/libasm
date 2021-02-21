@@ -14,28 +14,19 @@
 #include <string.h>
 #include <stdlib.h>
 
-char		*tst(char *dest, const char *str)
+int		tst(char *s1, const char *s2)
 {
-	int i;
+	int x;
 
-	i = 0;
-	while (str[i] != '\0')
-    {
-        dest[i] = str[i];
-        i++;
-    }
-    dest[i] = '\0';
-	return (dest);
+	x = 0;
+	while (s1[x] == s2[x] && s1[x] != '\0' && s2[x] != '\0')
+		x++;
+	return (s1[x] - s2[x]);
 }
 
 int main()
 {
-    char *dest;
-    char *str;
-    dest = malloc(100);
-
-    str = ft_strcpy(dest,"Hello");
-    printf("%s\n",str);
-    free(dest);
+    printf("%d\n",strcmp("Hello","Hellod"));
+	printf("%d\n",ft_strcmp("Hello","Hellod"));
     return(0);
 }
