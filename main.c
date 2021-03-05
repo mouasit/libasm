@@ -11,22 +11,32 @@
 /* ************************************************************************** */
 
 #include "libasm.h"
-#include <string.h>
-#include <stdlib.h>
 
-int		tst(char *s1, const char *s2)
+char	*ft_strdup(const char *s1)
 {
-	int x;
+	char		*dst;
+	size_t		i;
+	size_t		j;
 
-	x = 0;
-	while (s1[x] == s2[x] && s1[x] != '\0' && s2[x] != '\0')
-		x++;
-	return (s1[x] - s2[x]);
+	i = 0;
+	j = 0;
+	while (s1[i])
+		i++;
+	dst = (char*)malloc(sizeof(*dst) * (i + 1));
+	if (!dst)
+		return (NULL);
+	while (s1[j])
+	{
+		dst[j] = s1[j];
+		j++;
+	}
+	dst[j] = '\0';
+	return (dst);
 }
 
-int main()
+int main(int argc, char **argv)
 {
-    printf("%d\n",strcmp("Hello","Hellod"));
-	printf("%d\n",ft_strcmp("Hello","Hellod"));
+	char *str;
+
     return(0);
 }
