@@ -10,7 +10,7 @@ _ft_read:
 _err:
     push rax
     call ___error
-    pop r9
-    mov [rax], r9
+    pop rcx
+    mov [rax], rcx
     mov rax, -1
     ret

@@ -36,7 +36,6 @@ char	*ft_strdup(const char *s1)
 
 int main(int argc, char **argv)
 {
-	char *str;
 
     return(0);
 }
