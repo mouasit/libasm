@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libasm.h"
-
+/*
 char	*ft_strdup(const char *s1)
 {
 	char		*dst;
@@ -32,10 +32,16 @@ char	*ft_strdup(const char *s1)
 	}
 	dst[j] = '\0';
 	return (dst);
-}
+}*/
 
 int main(int argc, char **argv)
 {
+	char *str;
+	char *ptr;
 
+	str = strdup("jp");
+	ptr = ft_strdup("jp");
+	printf("%s\n",str);
+	printf("%s\n",ptr);
     return(0);
 }
