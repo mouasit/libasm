@@ -28,7 +28,7 @@ $(NAME):
 	ar -rc $(NAME) $(OBJ) && ranlib $(NAME)
 
 clean:
-	@rm -rf $(OBJECT)
+	@rm -rf $(OBJ)
 
 fclean: clean
 	@rm -rf $(NAME)

@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <errno.h>
 # include <fcntl.h>
+# include <stdlib.h>
 
 size_t		ft_strlen(const char *str);
 char		*ft_strcpy(char *dest, const char *str);
